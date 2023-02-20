@@ -2,7 +2,7 @@ import Card from "./Card";
 
 const CardList = ({ testData }) => {
   return (
-    <div>
+    <div className="mb-[50px]">
       {testData.map((profile) => (
         <Card {...profile} profile={profile} />
       ))}

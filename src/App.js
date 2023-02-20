@@ -1,5 +1,6 @@
 import "./App.css";
 import CardList from "./components/CardList";
+import Form from "./components/Form";
 
 function App({ title }) {
   const testData = [
@@ -20,12 +21,13 @@ function App({ title }) {
     },
   ];
   return (
-    <>
+    <div>
       <div className="header font-bold text-3xl font-serif text-center mt-[50px]">
         {title}
       </div>
+      <Form />
       <CardList testData={testData} className="mx-auto" />
-    </>
+    </div>
   );
 }
 
