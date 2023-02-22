@@ -4,16 +4,14 @@ const Card = ({ profile }) => {
       <img
         src={profile.avatar_url}
         alt="image"
-        className="w-full md:w-[200px]"
+        className="w-full md:w-[400px]"
       />
 
       <div className="info ml-[12px]">
         <div className="name text-2xl text-start font-bold w-[300px]">
           {profile.name}
         </div>
-        <div className="company text-2xl text-start mb-[100px]">
-          {profile.company}
-        </div>
+        <div className="company text-2xl text-start ">{profile.company}</div>
       </div>
     </div>
   );
