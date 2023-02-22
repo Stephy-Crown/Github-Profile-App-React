@@ -1,14 +1,19 @@
-import { useRef } from "react";
+// import { useRef } from "react";
+import { useState } from "react";
 const Form = () => {
   // Create a Ref object
-  const inputRef = useRef(null);
+  // const inputRef = useRef(null);
+
+  // Creating a useState object
+  const [userName, setUserName] = useState("");
 
   //Event handler for form submission(onSubmit event)
   const handleSubmit = (e) => {
     e.preventDefault();
     // We can read/write Refs in a Event handlers and Effects
-    console.log(inputRef.current.value);
-    inputRef.current.focus();
+    // console.log(inputRef.current.value);
+    // inputRef.current.focus();
+    console.log(userName);
   };
   return (
     <div className="px-4">
@@ -19,8 +24,10 @@ const Form = () => {
       >
         <div className="mx-auto">
           <input
-            ref={inputRef}
+            value={userName}
+            // ref={inputRef}
             type="text"
+            onChange={(e) => setUserName(e.target.value)}
             placeholder="Github username"
             className="w-full md:w-[500px] p-4 md:mr-4 mx-auto"
           />
